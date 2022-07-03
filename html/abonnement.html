@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <title>Action War VR</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+<div class="wrapper">
+  <header class="page-header">
+    <nav class="navbar">
+      <h2 class="logo">Action War VR</h2>
+      <ul class="">
+        <li class="">
+          <a href="./apropos.html">En Savoir Plus</a>
+        </li>
+        <li class="">
+          <a href="../index.php">Accueil</a>
+        </li>
+        <li class="">
+          <a href="">Contact</a>
+        </li>
+      </ul> 
+    </nav>
+  </header>
+
+  <main class="page-main">
+
+    <div class="caré">
+        <h2>Location de l'oculus + jeu
+        </br>
+        Durée 1 mois
+        </br>
+        </br>
+        25€
+        </h2>
+    </div>
+    <img src="../media/oculus.jpeg" width="250" height="200">
+    <div class="caré">
+        <h2>Location de l'oculus + jeu
+        </br>
+        Durée 1 an
+        </br>
+        </br>
+        250€
+        </h2>
+    </div>
+
+    <form action="../php/avis_fonct.php" method="post" class="form-container">
+        <h2>Laissez votre avis !</h2>
+        <label for="note">
+          <strong>Une note (sur 10)</strong>
+        </label>
+        <input type="text" placeholder="Votre Note" name="note" required/>
+    </br>
+        <label for="pseudo">
+            <strong>Votre pseudo</strong>
+          </label>
+          <input type="text" placeholder="Votre Pseudo" name="pseudo" required/>
+        </br>
+          <label for="comment">
+            <strong>Un commentaire ?</strong>
+          </label>
+          <input type="text" placeholder="Votre commentaire" name="comment" class="comment" required/>
+        </br>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+
+</main>
+</body>
+
+<link href="../css/style.css" rel="stylesheet">
+</script>
+
+</html>

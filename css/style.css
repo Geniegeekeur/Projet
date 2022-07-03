@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,700");
+
+:root {
+  --main-white-color: #f2f2f2;
+  --main-black-color: black;
+  --main-purple-color: #9e89b8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font: 16px/1.5 "Dosis", sans-serif;
+}
+
+/* CONTAINER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper > * {
+  padding: 20px;
+}
+
+
+/* HEADER
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-header {
+  background: var(--main-white-color);
+}
+.page-header nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.page-header ul {
+  display: flex;
+  order: 1;
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.page-header ul li:not(:last-child) {
+  padding-right: 15px;
+}
+
+.page-header .cta-contact {
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 5px 18px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+/* MAIN
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: black;
+  color: white;
+}
+
+.page-main2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-grow: 1;
+  background-color: black;
+  color: white;
+}
+
+.plus {
+    margin-top: -200px;
+    margin-left: 50px;
+}
+.img_plus {
+    width: 400px;
+}
+
+.abo {
+    margin-top: -200px;
+    margin-left: 50px;
+}
+.img_abo {
+    width: 400px;
+}
+
+.img_plus:hover {
+    filter: brightness(25%);
+}
+.img_abo:hover {
+    filter: brightness(25%);
+}
+
+.content_plus {
+    position: relative;
+    margin-top: -200px;
+    margin-left: 0px;
+    opacity: 0;
+    transition: 0.5s;
+    z-index:2;
+    font-size: 15px;
+  }
+.plus:hover .content_plus {
+    opacity:1;
+}
+
+.content_abo {
+    position: relative;
+    margin-top: -200px;
+    margin-left: 30px;
+    opacity: 0;
+    transition: 0.5s;
+    z-index:2;
+    font-size: 15px;
+  }
+.abo:hover .content_abo {
+    opacity:1;
+}
+
+.caré {
+  background-color: white;
+  width: 400px;
+  height: 400px;
+  color: black;
+  text-align: center;
+  align-items: center;
+}
+
+.caré h2 {
+  margin-top: 30%;
+}
+
+.comment {
+  height: 250px;
+}
+
+.form-container button {
+  color: black;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
+
+/* POPUP
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.open-btn {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .open-button {
+        background-color: #1c87c9;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 0.8;
+        position: fixed;
+      }
+      .login-popup {
+        position: relative;
+        text-align: center;
+        width: 100%;
+      }
+      .form-popup {
+        display: none;
+        position: fixed;
+        left: 45%;
+        top: 5%;
+        transform: translate(-45%, 5%);
+        border: 2px solid #666;
+        z-index: 9;
+      }
+      .form-container {
+        max-width: 300px;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .form-container input[type="text"],
+      .form-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #eee;
+      }
+      .form-container input[type="text"]:focus,
+      .form-container input[type="password"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      .form-container .btn {
+        background-color: #8ebf42;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 10px;
+        opacity: 0.8;
+      }
+      .form-container .cancel {
+        background-color: #cc0000;
+      }
+      .form-container .btn:hover,
+      .open-button:hover {
+        opacity: 1;
+      }
+
+/* MQ
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 767px) {
+  .page-header ul {
+    width: auto;
+    margin-top: 0;
+  }
+
+  .page-header .cta-contact {
+    order: 1;
+  }
+
+  .page-main {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .page-main {
+    padding-left: 90px;
+  }
+}
